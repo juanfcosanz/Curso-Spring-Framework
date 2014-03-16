@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.4.0.201310051539-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>src/main/resources/app-config01.xml</config>
+		<config>src/main/resources/app-config02.xml</config>
+		<config>src/main/resources/p02/app-02.xml</config>
+		<config>src/main/resources/p03/app-03.xml</config>
+		<config>src/main/resources/p06/app-06.xml</config>
+		<config>src/main/resources/p07/app-07.xml</config>
+		<config>src/main/resources/p10/app-10.xml</config>
+		<config>src/main/resources/p11/app-11.xml</config>
+		<config>src/main/resources/p14/app-14.xml</config>
+		<config>src/main/resources/p15/app-15.xml</config>
+		<config>src/main/resources/p08/app-08.xml</config>
+		<config>src/main/resources/p16/app-16.xml</config>
+		<config>src/main/resources/p16/app-1602.xml</config>
+		<config>src/main/resources/p20/app-20.xml</config>
+		<config>src/main/resources/p17/app-17.xml</config>
+		<config>src/main/resources/p18/app-18.xml</config>
+		<config>src/main/resources/p19/app-19.xml</config>
+		<config>src/main/resources/p13/app-13.xml</config>
+	</configs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>

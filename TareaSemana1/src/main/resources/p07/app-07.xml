@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 	<bean id="exampleBean" class="problema07.ExampleBean2"> -->
+<!-- 		<property name="beanOne"> -->
+<!-- 			<ref bean="anotherExampleBean" /> -->
+<!-- 		</property> -->
+		
+<!-- 		<property name="beanTwo" ref="yetAnotherBean"/> -->
+<!-- 		<property name="integerProperty" value="1"></property> -->
+<!-- 	</bean> -->
+	
+<!-- 	<bean id="anotherExampleBean" class="problema07.AnotherBean"></bean> -->
+<!-- 	<bean id="yetAnotherBean" class="problema07.YetAnotherBean"></bean> -->
+	
+	<bean id="exampleBean" class="problema07.ExampleBean3" factory-method="createInstance">
+	<constructor-arg ref="anotherExampleBean"/>
+	<constructor-arg ref="yetAnotherBean"/>
+	<constructor-arg value="1"/>
+	</bean>
+	
+	<bean id="anotherExampleBean" class="problema07.AnotherBean"></bean>
+	<bean id="yetAnotherBean" class="problema07.YetAnotherBean"></bean>
+	
+</beans>

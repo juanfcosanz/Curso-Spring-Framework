@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="bar" class="problema17.Bar" />
+	<bean id="baz" class="problema17.Baz" />
+
+	<!-- <bean id="foo" class="problema17.Foo"> -->
+	<!-- <constructor-arg ref="bar" /> -->
+	<!-- <constructor-arg ref="baz"/> -->
+	<!-- <constructor-arg value="foo@bar.com"/> -->
+	<!-- </bean> -->
+	
+	<bean id="foo" class="problema17.Foo" c:bar-ref="bar" c:baz-ref="baz" 
+	c:email="foo@bar.com" ></bean>
+</beans>
