@@ -13,13 +13,13 @@ import com.mycompany.cuentas.modelo.Cuenta;
 public class CuentaController {
 
 	@RequestMapping("/form")
-	public String formulario() {
+	public String initFormulario() {
 		return "cuenta/formulario";
 	}
-
+	
 	@RequestMapping("/agregarCuenta")
-	public String agregarCuenta(Cuenta cuenta) {
-
+	public String guardarFormulario(Cuenta cuenta) {
+		
 		System.out.println("La cuenta agregada es: " + cuenta.getDescripcion());
 		CuentaDAO dao = new CuentaDAO();
 		dao.agregar(cuenta);
@@ -27,32 +27,34 @@ public class CuentaController {
 	}
 
 	@RequestMapping("/listarCuentas")
-	public String listar(Model mv) {
+	public String listarCuentas(Model mv) {
 		CuentaDAO dao = new CuentaDAO();
 		List<Cuenta> cuentas = dao.listar();
+		
 		mv.addAttribute("cuentas", cuentas);
 		return "cuenta/lista";
 	}
-
+	
 	@RequestMapping("/eliminarCuenta")
 	public String remove(Cuenta cuenta) {
 		CuentaDAO dao = new CuentaDAO();
 		dao.eliminar(cuenta);
-		return "redirect:listarCuentas";
+		//return "forward:listarCuentas";
+		return  "redirect:listarCuentas";
 	}
-
+	
 	@RequestMapping("/muestraCuenta")
 	public String muestra(Long id, Model model) {
 		CuentaDAO dao = new CuentaDAO();
 		model.addAttribute("cuenta", dao.buscarPorId(id));
 		return "cuenta/muestra";
 	}
-
+	
 	@RequestMapping("/modificarCuenta")
 	public String modificar(Cuenta cuenta) {
+		System.out.println("La cuenta modificada es: " + cuenta.getDescripcion());
 		CuentaDAO dao = new CuentaDAO();
 		dao.modificar(cuenta);
 		return "redirect:listarCuentas";
 	}
-
 }

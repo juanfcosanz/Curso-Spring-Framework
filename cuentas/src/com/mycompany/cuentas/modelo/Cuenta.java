@@ -2,6 +2,8 @@ package com.mycompany.cuentas.modelo;
 
 import java.util.Calendar;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class Cuenta {
 	
 	private Long id;
@@ -12,6 +14,7 @@ public class Cuenta {
 	
 	private double valor;
 
+	@DateTimeFormat(pattern="dd/MM/yyyy")
 	private Calendar fechaPago;
 	
 	private TipoDeCuenta tipo;

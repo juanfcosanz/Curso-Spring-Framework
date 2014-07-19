@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HolaMundoController {
 
 	@RequestMapping("/holaMundoSpring")
-	public String saludo() {
-		System.out.println("Hola Mundo desde Spring MVC");
-		return "holaMundoSpring";
+	public String mostrarMensaje() {
+		System.out.println("Hola mundo desde Spring MVc");
+		return "holamundo";
 	}
 
 }
