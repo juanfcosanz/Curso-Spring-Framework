@@ -30,7 +30,7 @@ public class InfraController {
 				+ "password varchar(255));");
 		st22.execute();
 		
-		PreparedStatement st3 = c.prepareStatement("insert into usuarios(login, password) values ('rmaguilar','online');");
+		PreparedStatement st3 = c.prepareStatement("insert into usuarios(login, password) values ('joedayz','online');");
 		st3.execute();
 		
 		c.close();

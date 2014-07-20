@@ -26,4 +26,19 @@
 		</property>
 	</bean>
 	
+	<!-- Habilitando es uso de Jquery -->
+	<mvc:default-servlet-handler/>	
+	
+	<!-- Registrando el interceptor -->
+	<mvc:interceptors> 
+		<bean class="com.mycompany.cuentas.interceptor.AutorizadorInterceptor"/> 
+	</mvc:interceptors>
+	
+	<!-- Declaración del provedor de conexiones -->
+	<bean id="mysqlDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+	<property name="driverClassName" value="org.hsqldb.jdbcDriver" />
+		<property name="url" value="jdbc:hsqldb:file:cuentas.db" />
+		<property name="username" value="sa" />
+		<property name="password" value="" />
+	</bean>	
 </beans>
